@@ -1,0 +1,100 @@
+
+/* notification pour la limite */
+body{
+  background-image: url('lake-1581879_1920.jpg');
+  
+}
+
+.notification {
+  position: fixed;
+  top: -50%;
+  right: 0;
+  left: 0;
+  transition: top 300ms;
+  text-align: center;
+}
+
+.afficher {
+  top: 0;
+}
+
+.limite-atteinte {
+  color: rgba(252, 38, 38, 0.87);
+  position: relative;
+  animation: limite-atteinte linear .2s 3;
+
+}
+
+@keyframes limite-atteinte{
+  from {top: 106px;}
+  50%  {top: 86px;}
+  to   {top: 106px;}
+
+}
+
+#notification-texte {
+  display: inline-block;
+  background-color: rgba(252, 38, 38, 0.87);
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  border-radius: 16px;
+  text-align: center;
+
+
+}
+
+
+.limite {
+  width: 120px;
+  height: 80px;
+}
+
+.compteur {
+  font-size:10rem;
+  
+}
+
+
+.reset {
+  width: 200px;
+  height: 100px;
+  
+}
+.reset:active {
+  background-color: hsl(224, 89%, 31%);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.zone-de-clic {
+  width: 80%;
+  margin: 0 auto 2rem;
+  min-height: 240px;
+  background-color: rgb(225, 225, 241);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 8px rgba(0,0,0,.4);
+  /* Pour éviter de voir le texte sélectionné quand on clique 2x rapidement */
+  user-select: none;
+}
+
+
+@media (max-width: 770px){
+  .compteur{
+    font-size: 6em;
+      
+  }
+  .limite {
+    width: 90px;
+    height: 60px;
+    padding: 0%;
+    
+     }
+  }
+  
+  
+
+
